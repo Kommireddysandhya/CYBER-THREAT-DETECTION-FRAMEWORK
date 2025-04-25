@@ -1,0 +1,79 @@
+{% load static %}
+
+<!DOCTYPE html>   
+<html lang="">
+<head>
+<title> CYBER THREAT DETECTION FRAMEWORK USING DEEP LEARNING AND ADVANCED MACHINE LEARNING </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<style>
+  body {
+    font-size: 20px;
+    color: white;
+  }
+  h2.heading {
+    font-size: 36px;
+    color: white;
+  }
+  p {
+    font-size: 24px;
+    color: white;
+  }
+  .input100, .btn, select {
+    font-size: 20px;
+    color: black;
+  }
+  .bgded {
+    background-size: cover;
+    background-position: center;
+  }
+  .label-input100 {
+    color: white;
+  }
+</style>
+</head>
+<body id="top">
+<center>
+<!-- Top Background Image Wrapper -->
+<div class="bgded overlay" style="background-image:url('{% static 'images/02.avif' %}'); height: 100vh;"> 
+  <div id="pageintro" class="hoc clear"> 
+    <article>
+<br><br><br><br><br><br>
+      <h2 class="heading"> CYBER THREAT DETECTION FRAMEWORK USING DEEP LEARNING AND ADVANCED MACHINE LEARNING MODELS </h2>
+      <p> Select Algorithm and Row number </p>
+    </article>
+
+    <form action='output' method="POST" enctype="multipart/form-data" class="login100-form validate-form">
+      {% csrf_token %}
+         <ul class="nospace inline pushright">
+           <li>
+            <div class="wrap-input100 validate-input">
+              <span class="label-input100">ID</span>
+              <input class="input100" type="row" name="row">
+              <span class="focus-input100"></span>
+            </div>
+           </li>
+           <li>
+             <span class="label-input100">Algorithm</span>    
+             <div class="wrap-input100 validate-input">
+               <select class="input100" name="algo">
+                 <option value='xgb'>XG Boost</option>
+                 <option value='lgbm'>Light GBM</option>
+               </select>
+             </div>
+           </li>
+           <br>
+           <footer><button type="submit" class="btn">Predict</button></footer>
+         </ul>
+    </form>
+  </div>
+</div>
+
+<a id="backtotop" href="#top"><i class="fas fa-chevron-up"></i></a>
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</center>
+</body>
+</html>

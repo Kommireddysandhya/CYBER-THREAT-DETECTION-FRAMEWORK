@@ -1,0 +1,77 @@
+{% load static %}
+
+<!DOCTYPE html>   
+<html lang="en">
+<head>
+<title>CYBER THREAT DETECTION FRAMEWORK USING DEEP LEARNING AND ADVANCED MACHINE LEARNING MODELS</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="{% static 'layout/styles/layout.css' %}" rel="stylesheet" type="text/css" media="all">
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  .bgded {
+    background-image: url('{% static 'images/01.avif' %}');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .content {
+    text-align: center;
+    color: white;
+  }
+  .content h2 {
+    font-size: 3rem;
+  }
+  .content p {
+    font-size: 1.5rem;
+  }
+  .input100 {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 300px;
+    margin-top: 10px;
+  }
+  .btn {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+  }
+</style>
+</head>
+<body>
+<div class="bgded">
+  <div class="content">
+    <h2>CYBER THREAT DETECTION FRAMEWORK USING DEEP LEARNING AND ADVANCED MACHINE LEARNING</h2>
+    <p></p>
+    
+    <form action='input' method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <div>
+        <label style="font-size: 1.5rem;">Name</label><br>
+        <input class="input100" type="text" name="name">
+      </div>
+      <div>
+        <label style="font-size: 1.5rem;">Password</label><br>
+        <input class="input100" type="password" name="password">
+      </div>
+      <button type="submit" class="btn">LOGIN</button>
+    </form>
+  </div>
+</div>
+
+<script src="{% static 'layout/scripts/jquery.min.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.backtotop.js' %}"></script>
+<script src="{% static 'layout/scripts/jquery.mobilemenu.js' %}"></script>
+</body>
+</html>
